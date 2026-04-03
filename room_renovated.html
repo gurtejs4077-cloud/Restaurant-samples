@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Deluxe Room | Continent Hotels Nawanshahr</title>
+    <link rel="stylesheet" href="renovated.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <header id="main-nav" class="scrolled">
+        <div class="container nav-content">
+            <a href="renovated.html" class="logo">
+                <img src="./Continentnawanshahr_files/logo-hotel-01.png" alt="Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="renovated.html">Home</a></li>
+                <li><a href="about_renovated.html">About</a></li>
+                <li><a href="room_renovated.html">Rooms</a></li>
+                <li><a href="renovated.html#restaurant">Restaurant</a></li>
+                <li><a href="renovated.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" style="height: 60vh;">
+        <div class="hero-bg">
+            <img src="./Continentnawanshahr_files/handsome-young-man-laying-his-bed-morning-time-holding-coffee-tea-cup-using-laptop-scaled.jpg" alt="Super Deluxe Hero">
+        </div>
+        <div class="container hero-content glass" data-reveal style="padding: 40px; text-align: center;">
+            <span class="section-tag">Premium Suites</span>
+            <h1 style="font-size: 4rem;">Super <span class="playfair" style="color: var(--primary-gold);">Deluxe</span> Room</h1>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container exp-grid">
+            <div class="exp-image-wrapper glass" data-reveal>
+                <img src="./Continentnawanshahr_files/IMG-20170315-WA0011.jpg" alt="Room View">
+            </div>
+            <div class="exp-content" data-reveal>
+                <div class="glass" style="padding: 50px;">
+                    <span class="section-tag">Space & Comfort</span>
+                    <h2 class="section-title">290 sq. ft. of Elegance</h2>
+                    <p>The hotel has 25 well-appointed Super Deluxe rooms, outfitted in stylish, comfortable furnishings and soothing neutral tones. These rooms come with an option of a king-size or a twin bed.</p>
+                    <span class="price" style="margin-top: 30px;">₹4,700 <small>/ NIGHT</small></span>
+                    <a href="renovated.html#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" style="background: #0f1113;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 80px;" data-reveal>
+                <span class="section-tag">Exclusive Amenities</span>
+                <h2 class="section-title">Designed for Your Comfort</h2>
+            </div>
+            
+            <div class="feat-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="feat-card glass" data-reveal>
+                    <i data-lucide="fan" style="color: var(--primary-gold); margin-bottom: 20px;"></i>
+                    <h3>Individual AC</h3>
+                    <p>Personalized air conditioning system for your perfect climate control.</p>
+                </div>
+                <div class="feat-card glass" data-reveal>
+                    <i data-lucide="shield-check" style="color: var(--primary-gold); margin-bottom: 20px;"></i>
+                    <h3>Soundproof Walls</h3>
+                    <p>Enjoy absolute peace and quiet inside your room, regardless of outside activity.</p>
+                </div>
+                <div class="feat-card glass" data-reveal>
+                    <i data-lucide="coffee" style="color: var(--primary-gold); margin-bottom: 20px;"></i>
+                    <h3>Coffee / Tea Maker</h3>
+                    <p>Premium in-room selection of refreshments available at your convenience.</p>
+                </div>
+                <div class="feat-card glass" data-reveal>
+                    <i data-lucide="trees" style="color: var(--primary-gold); margin-bottom: 20px;"></i>
+                    <h3>Beautiful Garden View</h3>
+                    <p>Wake up to the serene and refreshing view of our landscaped gardens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <!-- Consistent Footer -->
+        <div class="container" style="padding: 100px 0 50px; text-align: center;">
+            <p>© 2024 Continent Hotels Nawanshahr.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const revealElements = document.querySelectorAll('[data-reveal]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
