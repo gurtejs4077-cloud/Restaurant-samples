@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -29,13 +29,25 @@
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact" class="btn btn-gold">Reservations</a></li>
             </ul>
-            <div class="menu-toggle">
+            <div class="menu-toggle" id="menu-toggle" aria-label="Open menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Full-Screen Nav Drawer -->
+    <nav class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <ul class="nav-drawer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <button class="nav-drawer-reserve" id="drawer-reserve-btn">Reserve a Table</button>
+        <p class="nav-drawer-tagline">Fine Dining · Crafted Spirits · Punjab</p>
+    </nav>
 
     <main>
         <!-- Hero Section with Background Video -->
@@ -49,13 +61,12 @@
             </div>
             
             <div class="hero-content">
-                <div class="glass-card hero-card">
-                    <h1 class="reveal-text">Elevate Your Presence</h1>
-                    <p class="reveal-subtext">The ultimate destination for fine dining and crafted spirits.</p>
-                    <div class="cta-buttons">
-                        <a href="#menu" class="btn btn-outline">Explore Menu</a>
-                        <a href="#contact" class="btn btn-gold">Book a Table</a>
-                    </div>
+                <div class="hero-eyebrow">Est. 2024 — Samrala, Punjab</div>
+                <h1>Elevate Your<br><em>Presence</em></h1>
+                <p class="hero-desc">The ultimate destination for fine dining and crafted spirits.</p>
+                <div class="cta-buttons">
+                    <a href="#menu" class="btn btn-outline">Explore Menu</a>
+                    <a href="#contact" class="btn btn-gold">Book a Table</a>
                 </div>
             </div>
             
@@ -140,16 +151,16 @@
                         
                         <div class="info-list">
                             <div class="info-item">
-                                <span class="icon">&#128205;</span>
-                                <p>3VPG+899, chowk, Near Bus Stand,<br>Samrari, Apra, Punjab 144416</p>
+                                <div class="info-icon">&#128205;</div>
+                                <p><strong>Address</strong>3VPG+899, chowk, Near Bus Stand,<br>Samrala, Apra, Punjab 144416</p>
                             </div>
                             <div class="info-item">
-                                <span class="icon">&#128222;</span>
-                                <p>09915088002</p>
+                                <div class="info-icon">&#128222;</div>
+                                <p><strong>Phone</strong>09915088002</p>
                             </div>
                             <div class="info-item">
-                                <span class="icon">&#9200;</span>
-                                <p>Mon - Sun: 7 AM - 10 PM</p>
+                                <div class="info-icon">&#9200;</div>
+                                <p><strong>Hours</strong>Mon – Sun: 7 AM – 10 PM</p>
                             </div>
                         </div>
                     </div>

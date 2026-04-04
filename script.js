@@ -148,26 +148,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Mobile Menu Toggle (Simplified)
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    // 6. Mobile Nav Drawer
+    const menuToggle = document.getElementById('menu-toggle');
+    const navDrawer = document.getElementById('nav-drawer');
+    const drawerLinks = navDrawer ? navDrawer.querySelectorAll('a') : [];
+    const drawerReserveBtn = document.getElementById('drawer-reserve-btn');
+
+    function openDrawer() {
+        menuToggle.classList.add('open');
+        navDrawer.classList.add('open');
+        navDrawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+        menuToggle.classList.remove('open');
+        navDrawer.classList.remove('open');
+        navDrawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active-mobile');
-            // Inline style for quick demonstration
-            if (navLinks.classList.contains('active-mobile')) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.background = 'rgba(10, 10, 10, 0.95)';
-                navLinks.style.padding = '20px';
-                navLinks.style.backdropFilter = 'blur(10px)';
-            } else {
-                navLinks.style.display = '';
-            }
+            navDrawer.classList.contains('open') ? closeDrawer() : openDrawer();
+        });
+    }
+    drawerLinks.forEach(link => {
+        link.addEventListener('click', () => { closeDrawer(); });
+    });
+    if (drawerReserveBtn) {
+        drawerReserveBtn.addEventListener('click', () => {
+            closeDrawer();
+            setTimeout(() => {
+                const contact = document.getElementById('contact');
+                if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
         });
     }
     // 7. Full Menu Modal Logic
