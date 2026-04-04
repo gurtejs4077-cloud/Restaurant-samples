@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1200);
     }
 
+    // 0.1 Force Play Hero Video (Bypass browser blocks)
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        heroVideo.play().catch(() => {
+            setTimeout(() => {
+                heroVideo.play();
+            }, 500);
+        });
+    }
+
     // 1. Navigation Scroll Effect
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
