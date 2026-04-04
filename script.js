@@ -12,13 +12,54 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1200);
     }
 
-    // 0.1 Force Play Hero Video (Bypass browser blocks)
+    // 0.1 Force Play Hero Video (Robust cross-browser autoplay)
     const heroVideo = document.getElementById('hero-video');
     if (heroVideo) {
-        heroVideo.play().catch(() => {
+        // Ensure critical attributes are set programmatically as well
+        heroVideo.muted = true;
+        heroVideo.loop = true;
+        heroVideo.playsInline = true;
+
+        function tryPlay() {
+            const playPromise = heroVideo.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // Autoplay blocked — reload source and wait for interaction
+                    heroVideo.load();
+                });
+            }
+        }
+
+        // Try immediately
+        tryPlay();
+
+        // Try again once metadata is loaded
+        heroVideo.addEventListener('loadedmetadata', tryPlay, { once: true });
+
+        // Try again once enough data is buffered
+        heroVideo.addEventListener('canplay', tryPlay, { once: true });
+
+        // On mobile, browsers often require a user gesture — play on first interaction
+        function playOnInteraction() {
+            tryPlay();
+            document.removeEventListener('touchstart', playOnInteraction);
+            document.removeEventListener('click', playOnInteraction);
+            document.removeEventListener('scroll', playOnInteraction);
+        }
+        document.addEventListener('touchstart', playOnInteraction, { passive: true });
+        document.addEventListener('click', playOnInteraction);
+        document.addEventListener('scroll', playOnInteraction, { passive: true });
+
+        // If video stalls or errors, reload and retry
+        heroVideo.addEventListener('stalled', () => {
+            heroVideo.load();
+            tryPlay();
+        });
+        heroVideo.addEventListener('error', () => {
             setTimeout(() => {
-                heroVideo.play();
-            }, 500);
+                heroVideo.load();
+                tryPlay();
+            }, 1000);
         });
     }
 

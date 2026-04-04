@@ -303,6 +303,8 @@ a {
     object-fit: cover;
     opacity: 1;
     filter: brightness(1.2) contrast(1.1);
+    /* Poster image shows while video loads or if playback fails */
+    background: url('data/photos/background.jpg') center center / cover no-repeat;
 }
 
 .video-overlay {
