@@ -45,6 +45,33 @@ body::before {
 .container { width:92%; max-width:var(--w); margin:0 auto; }
 .text-gold { color:var(--gold); }
 
+/* ─── GLASS EFFECT ───────────────────────────────────────── */
+.glass-card {
+    background: rgba(19, 18, 16, 0.55);
+    backdrop-filter: blur(22px) saturate(1.5);
+    -webkit-backdrop-filter: blur(22px) saturate(1.5);
+    border: 1px solid rgba(200,164,90,0.13);
+    box-shadow: 0 8px 48px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Hero glass card — floats over video */
+.hero-card {
+    background: rgba(6,6,6,0.42);
+    backdrop-filter: blur(18px) saturate(1.3);
+    -webkit-backdrop-filter: blur(18px) saturate(1.3);
+    border: 1px solid rgba(200,164,90,0.14);
+    padding: 48px 52px;
+    box-shadow: 0 16px 64px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Glassmorphic footer */
+.glass-footer {
+    backdrop-filter: blur(20px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+    background: rgba(6,6,6,0.82) !important;
+}
+
+
 /* ─── PRELOADER ──────────────────────────────────────────── */
 #preloader {
     position:fixed; inset:0;
@@ -219,9 +246,8 @@ body::before {
 }
 .hero-content {
     position:relative; z-index:3;
-    padding:0 32px calc(80px + var(--safe-bottom));
-    width:100%; max-width:calc(var(--w) + 64px);
-    margin:0 auto;
+    padding:0 32px calc(72px + var(--safe-bottom));
+    width:100%; max-width:900px;
 }
 .hero-eyebrow {
     font-family:'Cinzel',serif;
@@ -273,7 +299,7 @@ body::before {
 .about-image:hover img { transform:scale(1.04); }
 .about-image::before { content:''; position:absolute; top:20px; left:20px; width:48px; height:48px; border-top:1px solid var(--gold); border-left:1px solid var(--gold); z-index:2; opacity:.4; transition:opacity .4s; }
 .about-image:hover::before { opacity:.9; }
-.about-content { background:var(--surface); padding:72px 56px; display:flex; flex-direction:column; justify-content:center; border:1px solid var(--border-soft); }
+.about-content { padding:72px 56px; display:flex; flex-direction:column; justify-content:center; }
 .label { font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:12px; margin-bottom:18px; }
 .label::before { content:''; display:block; width:28px; height:1px; background:var(--gold); opacity:.6; }
 .section-title { font-size:clamp(2.2rem,5vw,3.5rem); margin-bottom:24px; color:var(--text); }
@@ -291,7 +317,7 @@ body::before {
 .section-h2 { font-size:clamp(2.2rem,5vw,3.4rem); font-weight:400; color:var(--text); line-height:1.1; }
 .section-desc { color:var(--text-muted); font-size:.88rem; margin-top:12px; line-height:1.7; }
 .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-bottom:52px; }
-.menu-item { position:relative; overflow:hidden; background:var(--surface2); display:flex; flex-direction:column; cursor:pointer; border:1px solid var(--border-soft); transition:border-color .4s; }
+.menu-item { position:relative; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; transition:border-color .4s; }
 .menu-item:hover { border-color:rgba(200,164,90,.3); }
 .item-img { aspect-ratio:4/3; overflow:hidden; background:#000; }
 .item-img img { width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease),filter .6s; filter:saturate(.65) brightness(.85); }
@@ -307,7 +333,7 @@ body::before {
 /* ─── CONTACT ────────────────────────────────────────────── */
 .contact-section { padding:100px 0; background:var(--deep); position:relative; }
 .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:stretch; border:1px solid var(--border-soft); }
-.contact-info { padding:72px 56px; background:var(--surface); border-right:1px solid var(--border-soft); display:flex; flex-direction:column; justify-content:center; }
+.contact-info { padding:72px 56px; border-right:1px solid var(--border-soft); display:flex; flex-direction:column; justify-content:center; }
 .contact-info h2 { font-size:clamp(2rem,4vw,3.2rem); margin-bottom:16px; color:var(--text); }
 .contact-info>p { color:var(--text-muted); font-size:.9rem; line-height:1.75; margin-bottom:44px; }
 .info-list { display:flex; flex-direction:column; gap:24px; }
@@ -315,7 +341,7 @@ body::before {
 .info-icon { width:38px; height:38px; flex-shrink:0; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:.9rem; color:var(--gold); background:rgba(200,164,90,.04); }
 .info-item p { font-size:.86rem; color:var(--text-muted); line-height:1.6; }
 .info-item strong { color:var(--text); display:block; margin-bottom:2px; font-family:'Cormorant Garamond',serif; font-size:1rem; font-weight:400; }
-.contact-form-container { padding:72px 56px; background:var(--surface2); display:flex; flex-direction:column; justify-content:center; }
+.contact-form-container { padding:72px 56px; display:flex; flex-direction:column; justify-content:center; }
 .contact-form-container h3 { font-size:1.8rem; font-weight:400; color:var(--text); margin-bottom:32px; }
 .form-group { margin-bottom:20px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
@@ -491,6 +517,15 @@ select option { background:var(--surface); color:var(--text); }
     .gallery-item { aspect-ratio:1; }
     .gallery-item.large { grid-column:span 2; aspect-ratio:16/9; }
 }
+
+
+    /* Glass cards on mobile */
+    .hero-card { padding: 28px 22px; }
+    .hero-card .hero-eyebrow { font-size:0.52rem; margin-bottom:14px; }
+    .about-content { padding: 36px 22px; }
+    .contact-info { padding: 36px 22px 32px; border-right:none; border-bottom:1px solid var(--border-soft); }
+    .contact-form-container { padding: 32px 22px 36px; }
+    .glass-card { backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); }
 
 /* ─── SMALL PHONES ───────────────────────────────────────── */
 @media(max-width:400px) {
