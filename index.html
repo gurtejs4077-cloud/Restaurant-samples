@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cactus Club | Premium Restaurant & Bar</title>
+    <meta name="description" content="Experience modern luxury at Cactus Club. Fine dining, signature cocktails, and a vibe like no other.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <img src="data/logo.jpg" alt="Cactus Club Logo" class="loader-logo">
+            <div class="loader-line"></div>
+        </div>
+    </div>
+    <header id="main-header">
+        <nav class="glass-nav">
+            <div class="logo">CACTUS CLUB</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact" class="btn btn-gold">Reservations</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Background Video -->
+        <section id="home" class="hero">
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="hero-video" poster="data/photos/background.jpg">
+                    <source src="data/Cactus_club.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="glass-card hero-card">
+                    <h1 class="reveal-text">Elevate Your Presence</h1>
+                    <p class="reveal-subtext">The ultimate destination for fine dining and crafted spirits.</p>
+                    <div class="cta-buttons">
+                        <a href="#menu" class="btn btn-outline">Explore Menu</a>
+                        <a href="#contact" class="btn btn-gold">Book a Table</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- About Section with Parallax -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image parallax" data-speed="0.1">
+                        <img src="data/photos/enterance_gate.jpg" alt="Cactus Club Entrance">
+                    </div>
+                    <div class="about-content glass-card reveal">
+                        <h2 class="section-title">The Art of <span class="text-gold">Hospitality</span></h2>
+                        <p>At Cactus Club, we believe that dining is more than just a meal—it's an experience. Our chef-driven menu and curated cocktail list are designed to excite the senses and leave a lasting impression.</p>
+                        <p>From the moment you step through our doors, you are transported into a world of modern elegance and warmth. Whether it's a romantic dinner or a night out with friends, we provide the perfect backdrop for your most memorable moments.</p>
+                        <a href="#gallery" class="btn btn-link">View Atmosphere &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Highlights -->
+        <section id="menu" class="menu-preview">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Signature <span class="text-gold">Selections</span></h2>
+                    <p>A glimpse into our seasonal collections</p>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item glass-card reveal-up">
+                        <div class="item-img">
+                            <img src="data/photos/satisfy_your_craving.jpg" alt="Our Cuisine">
+                        </div>
+                        <div class="item-info">
+                            <h3>Cactus Club Bar & Grill</h3>
+                            <p>Indulge in bold, flame-grilled flavors at Cactus Club Bar & Grill. Our expertly seasoned dishes are crafted to satisfy your deepest cravings and elevate every bite.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item glass-card reveal-up" style="transition-delay: 0.1s;">
+                        <div class="item-img">
+                            <img src="data/photos/wiskey.jpg" alt="Signature Cocktail">
+                        </div>
+                        <div class="item-info">
+                            <h3>Suntory Highball</h3>
+                            <p>Experience the perfect, perfectly-chilled Suntory Highball. Precisely mixed and instantly served from our dedicated draft tap for ultimate crispness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item glass-card reveal-up" style="transition-delay: 0.2s;">
+                        <div class="item-img">
+                            <img src="data/photos/whiskeybeer.jpg" alt="Prime Spirits">
+                        </div>
+                        <div class="item-info">
+                            <h3>Premium Draught Beer</h3>
+                            <p>Premium draught beer is high-quality, all-malt brew served fresh from pressurized kegs. It offers superior taste, smooth carbonation, and crispness compared to bottled alternatives.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-cta reveal">
+                    <button id="open-menu-btn" class="btn btn-outline">Explore Full Menu</button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h2>Join Us <span class="text-gold">Tonight</span></h2>
+                        <p>We invite you to experience the pinnacle of hospitality. Reservations are highly recommended for weekend evenings.</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="icon">&#128205;</span>
+                                <p>3VPG+899, chowk, Near Bus Stand,<br>Samrari, Apra, Punjab 144416</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">&#128222;</span>
+                                <p>09915088002</p>
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">&#9200;</span>
+                                <p>Mon - Sun: 7 AM - 10 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container glass-card reveal">
+                        <h3>Book a Table</h3>
+                        <form id="booking-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="time" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="" disabled selected>Guests</option>
+                                    <option value="2">2 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="6">6+ People</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-gold full-width">Check Availability</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="location" class="map-section">
+            <div class="container">
+                <div class="glass-card map-container reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d311.77213187897536!2d75.87448457064909!3d31.08688322473946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1775301004302!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cactus Club Restaurant & Bar. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Full Menu Modal -->
+    <div id="menu-modal" class="menu-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button id="close-menu-btn" class="close-btn">&times;</button>
+            
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Our Full <span class="text-gold">Menu</span></h2>
+                    <p>Near Apra Sweet Shop, Banga to Phillaur Road</p>
+                </header>
+
+                <div class="menu-sections">
+                    <!-- 1. Pizzas & Pastas -->
+                    <section class="menu-cat">
+                        <div class="cat-header">
+                            <h3>1. Pizzas & Pastas</h3>
+                        </div>
+                        
+                        <div class="sub-cat">
+                            <h4>Pizza (Non-Veg)</h4>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Medium</th>
+                                        <th>Large</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Cactus Spl. Chicken Pizza</td><td>300</td><td>500</td></tr>
+                                    <tr><td>Chilli Chicken Pizza</td><td>280</td><td>480</td></tr>
+                                    <tr><td>Keema Chicken Pizza</td><td>280</td><td>460</td></tr>
+                                    <tr><td>Salami Chicken Pizza</td><td>280</td><td>480</td></tr>
+                                    <tr><td>Onion Chicken Pizza</td><td>260</td><td>450</td></tr>
+                                    <tr><td>Chicken Sausage Pizza</td><td>280</td><td>470</td></tr>
+                                    <tr><td>Chicken Tikka Pizza</td><td>290</td><td>480</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="sub-cat">
+                            <h4>Pizza (Veg)</h4>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Medium</th>
+                                        <th>Large</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Cactus Spl. Veg. Pizza</td><td>290</td><td>440</td></tr>
+                                    <tr><td>Farm House Pizza / Paneer Tikka Pizza</td><td>290</td><td>425/400</td></tr>
+                                    <tr><td>Five Topping / Spl. Mushroom Pizza</td><td>280</td><td>390</td></tr>
+                                    <tr><td>Chilly Paneer Pizza</td><td>290</td><td>400</td></tr>
+                                    <tr><td>OTC Pizza</td><td>240</td><td>370</td></tr>
+                                    <tr><td>Cheese Corn / Cheese Tomato</td><td>240</td><td>340/360</td></tr>
+                                    <tr><td>Plain Cheese Pizza</td><td>220</td><td>320</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="sub-cat">
+                            <h4>Pasta</h4>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Non-Veg: Chicken Pasta (Red/White/Mix)</td><td>300 / 290 / 290</td></tr>
+                                    <tr><td>Veg: Pasta (White/Red/Cheese)</td><td>240 / 260 / 270</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- 2. Tandoori Snacks -->
+                    <section class="menu-cat">
+                        <div class="cat-header">
+                            <h3>2. Tandoori Snacks (Fish & Veg)</h3>
+                        </div>
+                        
+                        <div class="sub-cat">
+                            <h4>Tandoori Fish</h4>
+                            <p class="cat-note">All items are served as a full portion unless specified.</p>
+                            <table class="menu-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Fish Tikka (Malai, Irani, Haryali, Afghani, Kali Mirch, Pudina, Achari)</td><td>450</td></tr>
+                                    <tr><td>Fish Tandoori Tikka</td><td>440</td></tr>
+                                    <tr><td>Tandoori Pomfret Fish (2 Pcs)</td><td>300</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="sub-cat">
+                            <h4>Tandoori Veg Snacks</h4>
+                            <div class="column-grid">
+                                <table class="menu-table">
+                                    <tbody>
+                                        <tr><td>Paneer Tikka</td><td>230</td></tr>
+                                        <tr><td>Paneer Malai Tikka</td><td>250</td></tr>
+                                        <tr><td>Paneer Tikka (Haryali/Achari/Irani)</td><td>240</td></tr>
+                                        <tr><td>Paneer Peshwari Tikka (Mint/Strawberry)</td><td>250</td></tr>
+                                        <tr><td>Veg Platter</td><td>450</td></tr>
+                                    </tbody>
+                                </table>
+                                <table class="menu-table">
+                                    <tbody>
+                                        <tr><td>Mushroom Tikka (Reg/Achari/Irani)</td><td>230</td></tr>
+                                        <tr><td>Stuff Mushroom Tikka</td><td>250</td></tr>
+                                        <tr><td>Mushroom Duplex</td><td>250</td></tr>
+                                        <tr><td>Veg Seekh Kabab</td><td>200</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 3. Main Course -->
+                    <section class="menu-cat">
+                        <div class="cat-header">
+                            <h3>3. Main Course (Veg & Dal)</h3>
+                        </div>
+                        
+                        <div class="sub-cat">
+                            <h4>Vegetarian Specialties</h4>
+                            <div class="column-grid">
+                                <table class="menu-table">
+                                    <tbody>
+                                        <tr><td>Palak Paneer / Mattar Paneer</td><td>250</td></tr>
+                                        <tr><td>Paneer Do Pyaza / Lababdar / Adraki</td><td>260</td></tr>
+                                        <tr><td>Paneer Takka Takk</td><td>270</td></tr>
+                                        <tr><td>Diwani Handi</td><td>280</td></tr>
+                                        <tr><td>Paneer Pasanda</td><td>260</td></tr>
+                                        <tr><td>Veg Jalfrezi</td><td>270</td></tr>
+                                    </tbody>
+                                </table>
+                                <table class="menu-table">
+                                    <tbody>
+                                        <tr><td>Malai Kofta</td><td>250</td></tr>
+                                        <tr><td>Methi Mattar Malai</td><td>250</td></tr>
+                                        <tr><td>Mix Veg</td><td>220</td></tr>
+                                        <tr><td>Mushroom Mattar / Do Pyaza</td><td>240</td></tr>
+                                        <tr><td>Mushroom Butter Masala</td><td>260</td></tr>
+                                        <tr><td>Kadahi Mushroom</td><td>250</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="sub-cat">
+                            <h4>Dal (Lentils)</h4>
+                            <table class="menu-table">
+                                <tbody>
+                                    <tr><td>Dal Makhani / Dal Fry / Dal Handi / Yellow Dal Tadka</td><td>160</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- 4. Rice & Biryani -->
+                    <section class="menu-cat">
+                        <div class="cat-header">
+                            <h3>4. Rice & Biryani</h3>
+                        </div>
+                        <table class="menu-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Veg Price</th>
+                                    <th>Non-Veg Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Plain Rice</td><td>140</td><td>--</td></tr>
+                                <tr><td>Jeera Rice</td><td>150</td><td>--</td></tr>
+                                <tr><td>Veg Pulao / Mattar Pulao</td><td>160 / 180</td><td>--</td></tr>
+                                <tr><td>Biryani</td><td>200</td><td>250 (Chicken) / 300 (Mutton)</td></tr>
+                                <tr><td>Biryani with Gravy</td><td>250</td><td>300 (Chicken) / 350 (Mutton)</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 5. Summary of Other Categories -->
+                    <section class="menu-cat">
+                        <div class="cat-header">
+                            <h3>5. Other Specialties</h3>
+                        </div>
+                        <div class="other-grid">
+                            <div class="other-item">
+                                <h5>Non-Veg Main</h5>
+                                <p>Butter Chicken (410-450), Mutton Rogan Josh (400), Patiala Chicken (430).</p>
+                            </div>
+                            <div class="other-item">
+                                <h5>Breads</h5>
+                                <p>Tandoori Roti (15), Butter Naan (40), Garlic Naan (45), Keema Naan (200-250).</p>
+                            </div>
+                            <div class="other-item">
+                                <h5>Burgers / Sandwiches</h5>
+                                <p>Veg Burger (60-100), Chicken Sandwich (200).</p>
+                            </div>
+                            <div class="other-item">
+                                <h5>Soups</h5>
+                                <p>Veg (70-90) and Non-Veg (120-140) varieties.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <footer class="modal-footer">
+                    <p><strong>Prep Time:</strong> 20-25 minutes per order.</p>
+                    <p><strong>Note:</strong> Taxes as applicable.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Gallery Modal -->
+    <div id="gallery-modal" class="menu-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container glass-card">
+            <button id="close-gallery-btn" class="close-btn">&times;</button>
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Atmosphere & <span class="text-gold">Vibes</span></h2>
+                    <p>A glimpse into our exclusive world</p>
+                </header>
+                <div class="gallery-grid">
+                    <div class="gallery-item large">
+                        <img src="data/photos/personal_space_for_personal_events.jpg" alt="Events Space">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/gallary1.jpg" alt="Luxury Interior">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/gallary2.png" alt="Dining Experience">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/outdoor_sitting_also.jpg" alt="Outdoor View">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/personal_events.jpg" alt="Personal Events">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/gallary.jpg" alt="Dining Lounge">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/gallary4.jpg" alt="Club Vibes">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="data/photos/enterance_gate.jpg" alt="The Entrance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
