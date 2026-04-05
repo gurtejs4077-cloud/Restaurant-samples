@@ -174,18 +174,22 @@
                         <h3>Book a Table</h3>
                         <form id="booking-form">
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                                <label for="booking-name" class="label-text">Full Name</label>
+                                <input type="text" id="booking-name" placeholder="Your Name" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="date" required>
+                                    <label for="booking-date" class="label-text">Select Date</label>
+                                    <input type="date" id="booking-date" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="time" required>
+                                    <label for="booking-time" class="label-text">Select Time</label>
+                                    <input type="time" id="booking-time" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <select required>
+                                <label for="booking-guests" class="label-text">Number of Guests</label>
+                                <select id="booking-guests" required>
                                     <option value="" disabled selected>Guests</option>
                                     <option value="2">2 People</option>
                                     <option value="4">4 People</option>

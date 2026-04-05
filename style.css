@@ -357,6 +357,7 @@ body::before {
 .form-group { margin-bottom:20px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 input,select { width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,.1); padding:14px 0; border-radius:0; color:var(--text); font-family:'Inter',sans-serif; font-size:.88rem; outline:none; transition:border-color .3s; -webkit-appearance:none; appearance:none; }
+.label-text { display:block; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.7; margin-bottom: -10px; pointer-events:none; }
 input::placeholder { color:var(--text-dim); }
 input:focus,select:focus { border-bottom-color:var(--gold); }
 select option { background:var(--surface); color:var(--text); }
