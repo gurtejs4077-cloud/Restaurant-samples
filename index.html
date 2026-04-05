@@ -8,8 +8,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="data/photos/background.jpg" as="image">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -53,7 +55,7 @@
         <!-- Hero Section with Background Video -->
         <section id="home" class="hero">
             <div class="video-container">
-                <video autoplay muted loop playsinline preload="auto" id="hero-video" poster="data/photos/background.jpg">
+                <video autoplay muted loop playsinline preload="auto" id="hero-video" poster="data/photos/background.jpg" class="parallax" data-speed="0.75" fetchpriority="high">
                     <source src="data/cactus.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -83,7 +85,7 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image parallax" data-speed="0.1">
-                        <img src="data/photos/enterance_gate.jpg" alt="Cactus Club Entrance">
+                        <img src="data/photos/enterance_gate.jpg" alt="Cactus Club Entrance" loading="lazy" decoding="async">
                     </div>
                     <div class="about-content glass-card reveal">
                         <h2 class="section-title">The Art of <span class="text-gold">Hospitality</span></h2>
@@ -106,7 +108,7 @@
                 <div class="menu-grid">
                     <div class="menu-item glass-card reveal-up">
                         <div class="item-img">
-                            <img src="data/photos/vegpizza.webp" alt="Cactus Special Veg Pizza">
+                            <img src="data/photos/vegpizza.webp" alt="Cactus Special Veg Pizza" loading="lazy" decoding="async">
                         </div>
                         <div class="item-info">
                             <h3>Cactus Special Veg Pizza</h3>
@@ -116,7 +118,7 @@
                     
                     <div class="menu-item glass-card reveal-up" style="transition-delay: 0.1s;">
                         <div class="item-img">
-                            <img src="data/photos/chickenpizza.jpg" alt="Cactus Special Chicken Pizza">
+                            <img src="data/photos/chickenpizza.jpg" alt="Cactus Special Chicken Pizza" loading="lazy" decoding="async">
                         </div>
                         <div class="item-info">
                             <h3>Cactus Special Chicken Tikka Pizza</h3>
@@ -126,7 +128,7 @@
                     
                     <div class="menu-item glass-card reveal-up" style="transition-delay: 0.2s;">
                         <div class="item-img">
-                            <img src="data/photos/wiskey.jpg" alt="Cactus Special Cocktail">
+                            <img src="data/photos/wiskey.jpg" alt="Cactus Special Cocktail" loading="lazy" decoding="async">
                         </div>
                         <div class="item-info">
                             <h3>Cactus Special Suntory Highball</h3>
@@ -457,28 +459,28 @@
                 </header>
                 <div class="gallery-grid">
                     <div class="gallery-item large">
-                        <img src="data/photos/personal_space_for_personal_events.jpg" alt="Events Space">
+                        <img src="data/photos/personal_space_for_personal_events.jpg" alt="Events Space" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/gallary1.jpg" alt="Luxury Interior">
+                        <img src="data/photos/gallary1.jpg" alt="Luxury Interior" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/gallary2.png" alt="Dining Experience">
+                        <img src="data/photos/gallary2.png" alt="Dining Experience" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/outdoor_sitting_also.jpg" alt="Outdoor View">
+                        <img src="data/photos/outdoor_sitting_also.jpg" alt="Outdoor View" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/personal_events.jpg" alt="Personal Events">
+                        <img src="data/photos/personal_events.jpg" alt="Personal Events" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/gallary.jpg" alt="Dining Lounge">
+                        <img src="data/photos/gallary.jpg" alt="Dining Lounge" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/gallary4.jpg" alt="Club Vibes">
+                        <img src="data/photos/gallary4.jpg" alt="Club Vibes" loading="lazy" decoding="async">
                     </div>
                     <div class="gallery-item">
-                        <img src="data/photos/enterance_gate.jpg" alt="The Entrance">
+                        <img src="data/photos/enterance_gate.jpg" alt="The Entrance" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>

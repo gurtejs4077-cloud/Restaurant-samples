@@ -92,24 +92,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal, .reveal-up');
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // 3. Simple Parallax Effect
-    window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        
-        // Background Text Parallax
-        const bgText = document.querySelector('.parallax-bg-text');
-        if (bgText) {
-            bgText.style.transform = `translate(-50%, -${50 + (scrolled * 0.05)}%) rotate(${(scrolled * 0.01)}deg)`;
-        }
+    // 3. Smooth Parallax Effect with Visibility Optimization
+    const parallaxElements = document.querySelectorAll('.parallax');
+    let lastScrollY = -1;
+    let isParallaxActive = false;
 
-        // Image Parallax
-        const parallaxImages = document.querySelectorAll('.parallax');
-        parallaxImages.forEach(img => {
-            const speed = img.getAttribute('data-speed') || 0.1;
-            const yPos = -(scrolled * speed);
-            img.style.transform = `translateY(${yPos}px)`;
-        });
-    });
+    function applyParallax() {
+        if (!isParallaxActive) return;
+        const scrolled = window.scrollY;
+        if (scrolled !== lastScrollY) {
+            parallaxElements.forEach(el => {
+                const speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
+                const yPos = -(scrolled * speed);
+                el.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            });
+            lastScrollY = scrolled;
+        }
+        requestAnimationFrame(applyParallax);
+    }
+    
+    const parallaxObserver = new IntersectionObserver((entries) => {
+        const isSomePartVisible = entries.some(e => e.isIntersecting);
+        if (isSomePartVisible && !isParallaxActive) {
+            isParallaxActive = true;
+            requestAnimationFrame(applyParallax);
+        } else if (!isSomePartVisible) {
+            isParallaxActive = false;
+        }
+    }, { threshold: 0 });
+
+    parallaxElements.forEach(el => parallaxObserver.observe(el));
 
     // 4. Smooth Anchor Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
