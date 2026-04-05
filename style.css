@@ -27,7 +27,7 @@
 
 /* ─── RESET ──────────────────────────────────────────────── */
 *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-html { scroll-behavior:smooth; font-size:16px; background:var(--black); -webkit-text-size-adjust:100%; }
+html { scroll-behavior:smooth; font-size:16px; background:var(--black); -webkit-text-size-adjust:100%; text-size-adjust:100%; }
 body { font-family:'Inter',sans-serif; color:var(--text); background:var(--deep); overflow-x:hidden; line-height:1.65; }
 ul { list-style:none; }
 a { text-decoration:none; color:inherit; }
@@ -540,9 +540,10 @@ select option { background:var(--surface); color:var(--text); }
     .modal-header h2 { font-size:1.75rem; }
     .modal-header { margin-bottom:28px; padding-bottom:20px; }
     .menu-cat { margin-bottom:32px; }
-    .cat-header h3 { font-size:1.4rem; }
-    .sub-cat h4 { font-size:.78rem; }
-    .menu-table td { font-size:1rem; padding:12px 10px; }
+    .cat-header h3 { font-size:1.6rem; letter-spacing:0.02em; }
+    .sub-cat h4 { font-size:.92rem; letter-spacing:0.18em; }
+    .menu-table th { font-size:.85rem; padding:12px 10px; }
+    .menu-table td { font-size:1.1rem; padding:15px 10px; font-weight:400; }
     .column-grid,.other-grid { grid-template-columns:1fr; }
     .modal-footer { padding:14px 18px calc(14px + var(--safe-bottom)); flex-direction:column; gap:6px; }
 
