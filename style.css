@@ -477,6 +477,7 @@ select option { background:var(--surface); color:var(--text); }
 
     /* Hero */
     .hero { height:100svh; }
+    .video-container video { height: 130%; top: -15%; }
     .video-overlay { background:linear-gradient(to bottom, rgba(6,6,6,0.22) 0%, rgba(6,6,6,0.05) 28%, rgba(6,6,6,0.52) 65%, rgba(6,6,6,0.94) 100%); }
     .hero-content { padding:0 24px calc(60px + var(--safe-bottom)); }
     .hero h1 { font-size:clamp(2.4rem,11vw,3.6rem); margin-bottom:14px; }
